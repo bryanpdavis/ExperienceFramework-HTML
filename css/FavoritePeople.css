@@ -1,0 +1,44 @@
+﻿ul[class="VerticalList"] .Item {width: 100%; display: table; padding-top: 5px; padding-bottom: 5px;}
+
+ul[class="VerticalList"] .ItemWrapper {width: 100%; display: table;}
+
+ul[class="VerticalList"] .ThumbWrapperCircle {position: relative; display: table-cell; width: 25%;}
+ul[class="VerticalList"] .ThumbWrapperRect {position: relative; display: table-cell; width: 35%;}
+
+ul[class="VerticalList"] .Thumb {width: 100%;}
+
+ul[class="VerticalList"] .FavoritedFull {
+    background: url(../img/heart_full.png)center center no-repeat;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+ul[class="VerticalList"] .InfoWrapper {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+ul[class="VerticalList"] .info_container,
+ul[class="VerticalList"] .details_container {
+    width: 100%;
+    display: table;
+}
+
+
+ul[class="VerticalList"] span[exp-field="{Item.Title}"] {
+    font-size: 2em;
+    font-weight: 500;
+    color: black;
+}
+
+ul[class="VerticalList"] span[exp-field="{Item.SubTitle}"],
+ul[class="VerticalList"] span[exp-field="{Item.Info}"] {
+    font-size: 1.5625em;
+    font-weight: 500;
+    color: #828282;
+}
+

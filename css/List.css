@@ -1,0 +1,105 @@
+﻿.HorizontalList {overflow-x: auto; white-space: nowrap;}
+
+.HorizontalList li {
+    display: inline-block;
+}
+
+.PosterItemImage {
+    height: 206px;
+    min-width: 332px;
+    max-width: 419px;
+ }
+
+/* IMAGE SECTION */
+.PosterItemImage {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.PosterItemImage span .FavoriteEmpty {
+    background: url('../img/heart_empty.png') center center no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ThumbWrapperCircle span a.FavoriteEmpty {
+    background: url('../img/heart_empty.png') center center no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.PlayIcon {
+    background: url('../img/playIcon.png') center center no-repeat;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+/* END IMAGE SECTION */
+
+#ListTemplate .info_container,
+#ListTemplate .details_container {
+    width: 100%;
+    display: table;
+}
+
+.GetInfoIcon {
+    float: right;
+    background: url('../img/getInfoIcon.png') center center no-repeat;
+    width: 34px;
+    height: 10px;
+    margin-right: 15px;
+}
+
+ul[class="VerticalList"] .Item {width: 100%; display: table; padding-top: 5px; padding-bottom: 5px;}
+
+ul[class="VerticalList"] .ItemWrapper {width: 100%; display: table;}
+
+ul[class="VerticalList"] .ThumbWrapperCircle {position: relative; display: table-cell; width: 25%;}
+ul[class="VerticalList"] .ThumbWrapperRect {position: relative; display: table-cell; width: 35%;}
+
+ul[class="VerticalList"] .Thumb {width: 100%;}
+
+ul[class="VerticalList"] .FavoritedFull {
+    background: url(../img/heart_full.png)center center no-repeat;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+ul[class="VerticalList"] .InfoWrapper {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+ul[class="VerticalList"] .info_container,
+ul[class="VerticalList"] .details_container {
+    width: 100%;
+    display: table;
+}
+
+
+ul[class="VerticalList"] span[exp-field="{Item.Title}"] {
+    font-size: 2em;
+    font-weight: 500;
+    color: black;
+}
+
+ul[class="VerticalList"] span[exp-field="{Item.SubTitle}"],
+ul[class="VerticalList"] span[exp-field="{Item.Info}"] {
+    font-size: 1.5625em;
+    font-weight: 500;
+    color: #828282;
+}

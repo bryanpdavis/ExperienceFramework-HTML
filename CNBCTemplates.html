@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <!--Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/Base.css" rel="stylesheet" />
+    <link href="css/Video.css" rel="stylesheet" />
+    <link href="css/SearchBar.css" rel="stylesheet" />
+    <link href="css/MainMenu.css" rel="stylesheet" />
+    <link href="css/HorizontalList.css" rel="stylesheet" />
+    <link href="css/VerticalList.css" rel="stylesheet" />
+    <link href="css/CNBCStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="Page" exp-type="PageTemplate">
+        <div id="Modules" exp-type="ModulesWrapper">
+
+            <!--- CNBC HEADER TEMPLATE -->
+            <div id="PageHeader" class="Module" exp-type="">
+                <div class="moduleControls">
+                    <header class="CNBCHeader">
+                        <div id="CNBCPageHeader"><img class="Logo" src="img/CNBCLogo.png" /></div>
+                    </header>
+                </div>
+            </div>
+            <!--- MY WATCH LIST TEMPLATE -->
+            <div id="StockSearchTemplate" class="Module" exp-type="SearchBar">
+                <div class="moduleControls">
+                    <header class="CNBCHeader">
+                        <div id="MyWatchList">My Watchlist</div>
+                    </header>
+                    <div class="SearchMenuWrapper">
+                        <div class="ActionWrapper">
+                            <div class="TableDisplay PaddingRight">
+                                <a href="#" class="BTN Secondary"><nobr><span>My Watchlist</span><img class="IconImage" src="img/chevron_down.png" /></nobr></a>
+                            </div>
+                        </div>
+                        <div class="SearchWrapper">
+                            <div class="SearchWrapperInner">
+                                <span class="SearchIconLeft"></span>
+                                <input name="SymbolText" type="search" placeholder="Add Symbol to Watchlist" id="SymbolSearch" class="SearchField" />
+                                <a href="#" class="SearchIconRight"></a>
+                            </div>
+                        </div>
+                        <div class="StockSearchSettingsWrapper">
+                            <div class="TableDisplay">
+                                <div class="TableCellDisplay PaddingLeft">
+                                    <a id="AddSymbolButton" class="BTN Primary">Add</a>
+                                </div>
+                                <div class="TableCellDisplay PaddingLeft">
+                                    <a id="EditSavedSymbolsButton" class="BTN Secondary">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MyStocks">
+                        <table id="MyStocksListTable" class="StocksTable">
+                            <tr class="ListHeading">
+                                <th>LIST A-Z</th>
+                                <th>LAST PRICE</th>
+                                <th>CHANGE<br />% CHANGE</th>
+                                <th>Volume</th>
+                                <th>DAY RANGE</th>
+                            </tr>
+                            <!-- APPENDING TRs FOR EACH STOCK ITEM -->
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Positive" data-change="Positive">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeUp"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Neutral" data-change="Neutral">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeNone"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Negative" data-change="Negative">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeDown"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--- EDITORS PICKS TEMPLATE -->
+            <div id="HotStocksTemplate" class="Module" exp-type="SearchBar">
+                <div class="moduleControls">
+                    <header class="CNBCHeader">
+                        <div id="HotStocks">Hot Stocks</div>
+                    </header>
+                    <div class="MyStocks">
+                        <table id="HotStocksTable" class="StocksTable">
+                            <tr class="ListHeading">
+                                <th>LIST A-Z</th>
+                                <th>LAST PRICE</th>
+                                <th>CHANGE<br />% CHANGE</th>
+                                <th>Volume</th>
+                                <th>DAY RANGE</th>
+                            </tr>
+                            <!-- APPENDING TRs FOR EACH STOCK ITEM -->
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Positive" data-change="Positive">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeUp"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Neutral" data-change="Neutral">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeNone"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="StockListItem">
+                                <td><div class="StockSymbol" data-stocksymbol="StockSymbol">AERI</div><div class="CompanyName" data-stockname="StockName">Aerie Pharmaceuticals Inc</div></td>
+                                <td>
+                                    <div class="LastPrice">
+                                        <div class="SecurityValue" data-securityvalue="SecurityValue">34.95 USD</div><div class="Timestamp ">09/16/16 EDT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="ChangeWrapper Negative" data-change="Negative">
+                                        <div class="ChangePCT" data-changepct="ChangePCT">+0.08</div>
+                                        <div class="ChangePercent" data-changepercent="ChangePercent">
+                                            <nobr><span class="Change ChangeDown"></span>+0.2294%</nobr>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><div class="Volume" data-volume="Volume">359.40K</div></td>
+                                <td>
+                                    <div class="DayRange" data-dayrange="DayRange">
+                                        <span data-lownumber="LowNumber">30.9</span> &ndash; <span data-highnumber="HighNumber">35.25</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- MY STOCK EDITOR MODAL -->
+            <div id="EditMyStocks" class="modal hide">
+                <table class="EditMyStocksTable">
+                    <tr>
+                        <th colspan="4">Edit My Watchlist<a class="BTN Close BorderFifty" data-action="Close" href="#"></a></th>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="BTN BTNFull Secondary"><img src="img/list_icon.png" /></a></td>
+                        <td class="StockSymbol" data-stocksymbol="StockSymbol">AERI</td>
+                        <td class="CompanyName" data-stockname="AERI">Aerie Pharmaceuticals Inc</td>
+                        <td><a href="#" class="BTN BTNFull Critical" data-action="Remove">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="BTN BTNFull Secondary"><img src="img/list_icon.png" /></a></td>
+                        <td class="StockSymbol" data-stocksymbol="StockSymbol">AERI</td>
+                        <td class="CompanyName" data-stockname="S">Aerie Pharmaceuticals Inc</td>
+                        <td><a href="#" class="BTN BTNFull Critical" data-action="Remove">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="BTN BTNFull Secondary"><img src="img/list_icon.png" /></a></td>
+                        <td class="StockSymbol" data-stocksymbol="StockSymbol">AERI</td>
+                        <td class="CompanyName" data-stockname="CSCO">Aerie Pharmaceuticals Inc</td>
+                        <td><a href="#" class="BTN BTNFull Critical" data-action="Remove">Remove</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="RemoveModal" class="modal hide">
+                <table class="EditMyStocksTable">
+                    <tr>
+                        <td colspan="2">
+                            <a class="BTN Close BorderFifty" data-action="Close" href="#"></a>
+                            <p><span>Are you sure you want to remove "</span><span data-stockname="StockName">THIS</span><span>" from your watchlist?</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="BTN Critical BTNFull TextCenter" data-action="Remove">Remove</a></td>
+                        <td><a href="#" class="BTN Secondary BTNFull TextCenter" data-action="Cancel">Cancel</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div><!-- END MODULES -->
+    </div>
+
+
+    <script>
+
+        jQuery('input').keyup(function () {
+            this.value = this.value.toUpperCase();
+        });
+
+        jQuery('#AddSymbolButton').click(function () {
+        });
+
+        jQuery('#EditSavedSymbolsButton').click(function () {
+            jQuery('#EditMyStocks').addClass('show');
+            jQuery('#EditMyStocks').removeClass('hide');
+        });
+
+        jQuery("#EditMyStocks").click(function (event) {
+                    
+            console.log(jQuery(event.target));
+
+            if (jQuery(event.target).attr('data-action') == 'Remove') {
+                console.log('HAS THE CLASS');
+
+                jQuery('#RemoveModal').removeClass('hide');
+                jQuery('#RemoveModal').removeClass('show');
+
+                var StockNameValue = jQuery(event.target).parent().prev('td').attr('data-stockname');
+
+                jQuery('#RemoveModal span[data-stockname]').text(StockNameValue);
+            }
+
+            if (jQuery(event.target).attr('data-action') == 'Close') {
+                jQuery('#EditMyStocks').removeClass('show');
+                jQuery('#EditMyStocks').addClass('hide');
+            }
+
+        });
+
+
+        jQuery("#RemoveModal").click(function (event) {
+            if (jQuery(event.target).attr('data-action') == 'Remove') {
+                console.log('REMOVE ' + jQuery('#RemoveModal span[data-stockname]').text() + ' FROM MY STOCKS');
+            }
+            if (jQuery(event.target).attr('data-action') == 'Cancel' || jQuery(event.target).attr('data-action') == 'Close') {
+                console.log('CANCEL');
+                jQuery('#RemoveModal').removeClass('show');
+                jQuery('#RemoveModal').addClass('hide');
+            }
+        });
+                
+
+    </script>
+
+
+
+</body>
+
+</html>

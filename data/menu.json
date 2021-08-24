@@ -1,0 +1,19 @@
+﻿{
+    "Menu": {
+        "Items" : [
+            {
+                "title": "My TV",
+                "pageid": "mytv",
+                "selected" : "selected"
+            },
+            {
+                "title": "Library",
+                "pageid": "library"
+            },
+            {
+                "title": "Explore",
+                "pageid": "explore"
+            }
+        ]
+    }
+}

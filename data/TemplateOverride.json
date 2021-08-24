@@ -1,0 +1,48 @@
+﻿{
+    "Template": {
+        "Data": [
+            {
+                "Name": "FavoritesData",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoriteShows&app=ShowtimeNetworkHome",
+                "variables": [
+                    {
+                        "favoriteseries": "$data/Favorites/Shows['seriesid']", //Creates a local array of program ids.
+                        "favoriteepisode": "$data/Favorites/Shows['programid']", //Creates a local array of program ids.
+                        "scheduleMetadata": "$data/Schedule/Shows" //Provides a schedule of the programs
+                    }
+                ],
+                "dataFunction" : "function(d) { if(device.accessibility > 0) { ModuleDefaults.items.bold = 'true'; }"
+            }
+        ],
+        "ModuleDefaults": {
+            "items.bold" : "true"
+        },
+        "Modules": [
+            {
+                //Upcoming Shows Module is required in the 0th index if the content is episodic.
+                "Upcoming Shows": {
+                    "type": "List",
+                    "index":  0,
+                    "user.subscription": "0",
+                    "title": "Upcoming Shows",
+                    "data": "data/shows.json",
+                    "items.limit": "10",
+                    "items.title": "$data/Shows/Show['title']",
+                    "items.subtitle": "$data/Shows/Show['subtitle']"
+                },
+                "Missed Shows": {
+                    "type": "List",
+                    "title": "Missed Shows",
+                    "data": "data/shows.json",
+                    "items.title": "$data/Shows/Show['title']",
+                    "variables": [{
+                            "airdate": "$data/Shows/Show['airdate']",
+                            "airtime": "$data/Shows/Show['airtime']",
+                            "seriesid": "$data/Shows/Show['seriesid']"
+                        }],
+                    "dataFunction": "js/UpcomingShows.js"
+                }
+            }
+        ]
+    }
+}

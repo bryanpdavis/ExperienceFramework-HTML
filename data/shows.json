@@ -1,0 +1,26 @@
+﻿{
+    "Shows": {
+        "Show" : [
+            {
+                "title": "Broad City1",
+                "subtitle": "S00 E00 | Episode Title | NBC",
+                "thumb": "img/sample_item_image.jpg"
+            },
+            {
+                "title": "Broad City2",
+                "subtitle": "S00 E00 | Episode Title | NBC",
+                "thumb": "img/sample_item_image_02.jpg"
+            },
+            {
+                "title": "Broad City3",
+                "subtitle": "S00 E00 | Episode Title | NBC",
+                "thumb": "img/sample_item_image_03.jpg"
+            },
+            {
+                "title": "Broad City4",
+                "subtitle": "S00 E00 | Episode Title | NBC",
+                "thumb": "img/sample_item_image_04.jpg"
+            }
+        ]
+    }
+}

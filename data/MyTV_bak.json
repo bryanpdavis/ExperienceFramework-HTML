@@ -1,0 +1,215 @@
+﻿{
+    "Template": {
+        "Data": [
+            {
+                "Name": "FavoritesData",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoriteSeries&app=Global",
+                "Variables": [
+                    {
+                        "favoriteSeries": "$data/Favorites/Shows['seriesid']"
+                    }
+                ],
+                "dataFunction": "function(d) { if(device.accessibility > 0) { ModuleDefaults.items.bold = 'true'; }"
+            },
+            {
+                "Name": "LiveShowsData",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=LiveShows&app=Global",
+                "Variables": [
+                    {
+                        "liveSeriesShows": "$data/Schedule/Shows"
+                    }
+                ],
+                "dataFunction": "function(d) { if(device.accessibility > 0) { ModuleDefaults.items.bold = 'true'; }"
+            }
+        ],
+        "ModuleDefaults": {
+            "Items.bold": "true"
+        },
+        "Modules": [
+            {
+                "ID": "Search",
+                "Type": "SearchBar",
+                "Index": 0,
+                "User.Subscription": "0",
+                "Data": "data/search.json",
+                "Items.Limit": "5",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Items.Subtitle": "$data/Shows/Show['subtitle']",
+                "DisplayGuideNav": true,
+                "DisplaySettingsNav": true,
+                "VoiceUrl": "/services/nlp",
+                "SettingsAction": "Nav({Settings|MyTV|Library|Explore|Search|Guide|Live|url:http(s)://...})",
+                "GuideAction": "Nav(Guide)"
+            },
+            {
+                "ID": "Video",
+                "Type": "Video",
+                "Title": "STREAMING NOW",
+                "ShowFavoriteToggle": "true",
+                "Data": "$liveSeriesShows",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Casting Setup": {
+                            "Index": 0,
+                            "Icon": "url:http(s)://...",
+                            "Action": "Nav({Settings|Home|Search|Guide|Live|url:http(s)://...})"
+                        },
+                        "Cast": {
+                            "Index": 1,
+                            "Icon": "url:http(s)://...",
+                            "Action": "Overlay(Casting)"
+                        }
+                    }
+                ],
+                "dataFunction": "js/Video.js"
+            },
+            {
+                "ID": "FavoriteShowsOnNow",
+                "Type": "List",
+                "Title": "FAVORITE SHOWS ON NOW",
+                "ShowFavoriteToggle": "true",
+                "Data": "$liveSeriesShows",
+                "Items.Title.Style": "backgroundColor:#ebebeb",
+                "Items.Subtitle.Style": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "ContinueWatching",
+                "Type": "List",
+                "Title": "CONTINUE WATCHING",
+                "Direction": "Horizontal",
+                "ShowFavoriteToggle": "true",
+                "FavoriteAction": "data/setFavorites.json?id={device.guid|acct.guid}&name=FavoriteChannels&app=Global&seriesid=$seriesId",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=BookmarkedShows&app=Global",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "bookmarkTime": "$data/Shows/Show['bookmarkTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "dataFunction": "js/ContinueWatching.js"
+            },
+            {
+                "ID": "FavoriteChannels",
+                "Type": "List",
+                "Title": "FAVORITE CHANNELS",
+                "Direction": "Horizontal",
+                "ShowFavoriteToggle": "true",
+                "FavoriteAction": "data/setFavorites.json?id={device.guid|acct.guid}&name=FavoriteChannels&app=Home&seriesid=$seriesId",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoriteChannels&app=Home&seriesId=$seriesId",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "FavoritePeopleOnNow",
+                "Type": "List",
+                "Title": "FAVORITE PEOPLE ON NOW",
+                "Direction": "Vertical",
+                "ShowFavoriteToggle": "true",
+                "FavoriteAction": "data/setFavorites.json?id={device.guid|acct.guid}&name=FavoritePeople&app=Home&seriesid=$seriesId",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoritePeopleOnNow&app=Home&seriesId=$seriesId",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "FavoritesOnLater",
+                "Type": "List",
+                "Title": "FAVORITES ON LATER",
+                "Direction": "Vertical",
+                "ShowFavoriteToggle": "true",
+                "FavoriteAction": "data/setFavorites.json?id={device.guid|acct.guid}&name=FavoriteSeries&app=Home&seriesid=$seriesId",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoriteSeriesOnLater&app=Home&seriesId=$seriesId",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "FavoriteTeamsOnNow",
+                "Type": "List",
+                "Title": "FAVORITES TEAMS ON NOW",
+                "Direction": "Horizontal",
+                "ShowFavoriteToggle": "true",
+                "FavoriteAction": "data/setFavorites.json?id={device.guid|acct.guid}&name=FavoriteTeams&app=Home&seriesid=$teamId&favorite={item.favorite}",
+                "Data": "data/favorites.json?id={device.guid|acct.guid}&name=FavoriteSeriesOnLater&app=Home&seriesId=$seriesId",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Variables": [
+                    {
+                        "airDate": "$data/Shows/Show['airDate']",
+                        "airTime": "$data/Shows/Show['airTime']",
+                        "seriesId": "$data/Shows/Show['seriesId']",
+                        "teamId": "$data/Teams/Team['id']"
+                    }
+                ],
+                "dataFunction": "js/FavoriteTeamsOnNow.js"
+            },
+            {
+                "ID": "MainMenu",
+                "Type": "MainMenu",
+                "Index": "fixed",
+                "User.Subscription": "0",
+                "Title": "",
+                "Height": "56",
+                "Background": "{#FFF|url:url:http(s)}://...}",
+                "SelectedBackground": "{#00b2ee|url:url:http(s)}://...}",
+                "Buttons": [
+                    {
+                        "1": {
+                            "Title": "My TV",
+                            "Action": "Nav({Settings|Home|Search|Guide|Live|url:http(s)}://...})"
+                        },
+                        "2": {
+                            "Action": "Nav({Settings|Home|Search|Guide|Live|url:http(s)}://...})",
+                            "Title": "Library"
+                        },
+                        "3": {
+                            "Title": "Explore",
+                            "Action": "Nav({Settings|Home|Search|Guide|Live|url:http(s)}://...})"
+                        }
+                    }
+                ],
+                "Data": "data/search.json",
+                "Items.Limit": "5",
+                "Items.Title": "$data/Shows/Show['title']",
+                "Items.Subtitle": "$data/Shows/Show['subtitle']"
+            }
+        ]
+    }
+}

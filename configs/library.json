@@ -1,0 +1,130 @@
+﻿{
+    "Template": {
+        "ShowMainMenu": true,
+        "ShowSearchMenu": true,
+        "SectionID" : "library",
+        "Modules": [
+            {
+                "ID": "Search",
+                "Type": "SearchBar",
+                "Title": "",
+                "Data": "data/search.json"
+            },
+            {
+                "ID": "FavoriteTeamsOnNow",
+                "Type": "List",
+                "Title": "FAVORITE EPISODES ON NOW",
+                "ShowFavoriteToggle": "true",
+                "Direction": "Vertical",
+                "Data": "data/shows.json",
+                "Items.Title": "//title",
+                "Items.Subtitle": "//subtitle",
+                "Items.Thumbnail": "//thumb",
+                "Items.Root": "//Shows/Show",
+                "Variables": [
+                    {
+                        "airDate": "/Shows/Show/airDate",
+                        "airTime": "/Shows/Show/airTime",
+                        "seriesId": "/Shows/Show/seriesId"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "FavoriteShowsOnNow",
+                "Type": "List",
+                "Title": "FAVORITE SHOWS ON NOW",
+                "ShowFavoriteToggle": "true",
+                "Data": "data/shows.json",
+                "Direction": "Vertical",
+                "Items.Title": "//title",
+                "Items.Subtitle": "//subtitle",
+                "Items.Thumbnail": "//thumb",
+                "Items.Root": "//Shows/Show",
+                "Variables": [
+                    {
+                        "airDate": "/Shows/Show/airDate",
+                        "airTime": "/Shows/Show/airTime",
+                        "seriesId": "/Shows/Show/seriesId"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "Favorites",
+                "Type": "List",
+                "Title": "FAVORITE TEAMS ON NOW",
+                "ShowFavoriteToggle": "true",
+                "Data": "data/shows.json",
+                "Items.Title": "//title",
+                "Items.Subtitle": "//subtitle",
+                "Items.Thumbnail": "//thumb",
+                "Items.Root": "//Shows/Show",
+                "Variables": [
+                    {
+                        "airDate": "/Shows/Show/airDate",
+                        "airTime": "/Shows/Show/airTime",
+                        "seriesId": "/Shows/Show/seriesId"
+                    }
+                ],
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "MyStocks",
+                "Type": "Table",
+                "Title": "MyStocks",
+                "ShowFavoriteToggle": "true",
+                "Data": "data/stocks.json",
+                "Columns": [
+                    {
+                        "Header": "LIST A-Z",
+                        "Data": "<b>{var:Ticker}</b><br/>{var:CompanyName}"
+                    },
+                    {
+                        "Header": "LAST PRICE",
+                        "Align": "Right",
+                        "Data": "{var:Last}<br/>{var:LastTime}"
+                    },
+                    {
+                        "Header": "CHANGE<br />% CHANGE",
+                        "Align": "Right",
+                        "Data": "<b>{var:Change}</b><br/>{var:ChangePCT}"
+                    },
+                    {
+                        "Header": "Volume",
+                        "Align": "Right",
+                        "Data": "{var:Volume}"
+                    },
+                    {
+                        "Header": "DAY RANGE",
+                        "Align": "Right",
+                        "Data": "{var:Low} - {var:High}"
+                    }
+                ],
+                "Items.Root": "//Result/Stock",
+                "Items.Variables": {
+                    "Ticker": "//Ticker",
+                    "CompanyName": "//CompanyName",
+                    "Last": "//Last",
+                    "LastTime": "//LastTime",
+                    "Change": "//Change",
+                    "ChangePCT": "//ChangePCT",
+                    "Volume": "//Volume",
+                    "Low": "//Low",
+                    "High": "//High"
+                },
+                "dataFunction": "js/FavoriteShows.js"
+            },
+            {
+                "ID": "MainMenu",
+                "Type": "MainMenu",
+                "Title": "",
+                "Data": "data/menu.json",
+                "Items.Title": "//title",
+                "Items.Link": "//pageid",
+                "Items.Root": "//Menu/Items",
+                "Items.Selected": "//selected"
+            }
+        ]
+    }
+}

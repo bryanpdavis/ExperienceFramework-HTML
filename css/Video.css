@@ -1,0 +1,33 @@
+﻿#VideoPanel header {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 35px;
+}
+
+#VideoPanel div[exp-field="{title}"] {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5625em;
+    font-weight: 600;
+}
+#VideoPanel a[exp-field="{cast}"] {
+    width: 110px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5625em;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+}
+#VideoPanel a[exp-field="{cast}"] img {
+    padding-left: 5px;
+}
+
+#VideoPanel a[exp-field="{more}"] {
+    display: table-cell;
+    vertical-align: middle;
+    background: url('../img/arrow.png') center center no-repeat;
+    width: 20px;
+    height: 25px;
+}

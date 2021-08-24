@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/vendor/jsonfn.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/Base.css" rel="stylesheet" />
+    <link href="css/Video.css" rel="stylesheet" />
+    <link href="css/SearchBar.css" rel="stylesheet" />
+    <link href="css/MainMenu.css" rel="stylesheet" />
+    <link href="css/List.css" rel="stylesheet" />
+    <script type="text/javascript">
+        //Mapping variables passed in as variables from the main navigation.
+        var section, providerid, seriesid, programid, Page;
+        
+        //Init the Experience UI Framework
+        //Ingest any existing page modules present in the markup.
+        //Check the Configuration Service for a Configuration Override assigned to the Template Signature.
+
+        /*$(function () {
+            //Use standard js and html to build your modules.
+            /*var UpcomingShows = new Experience.Controls.List("UpcomingShows");
+            UpcomingShows.Style = "";
+            UpcomingShows.Index = 0;
+            UpcomingShows.Title = "Upcoming Shows";
+            UpcomingShows.Data = "data/shows.json";
+            UpcomingShows.Items.limit = 10;
+            UpcomingShows.Items.title = "$data/Shows/Show['title']";
+            UpcomingShows.Items.Subtitle = "$data/Shows/Show['Subtitle']";
+            UpcomingShows.render();
+        });
+        */
+
+        $(function ()
+        {
+            $.ajaxSetup({ cache: false });
+
+            $.getJSON("data/ExperienceFrameworkReference.json", function (data)
+            {
+                console.log("Framework References Initializing");
+                Experience.Configuration.Module.Init(data.ModuleDefinitions);
+                console.log("Framework References Initialized");
+
+                //Experience.Controls.Template = new Experience.Configuration.Template(data.TemplateDefinitions);
+                //Experience.Controls.Component = new Experience.Configuration.Component(data.ComponentDefinitions);
+
+                $.getJSON("configs/mytv.json", function (data)
+                {
+                    console.log("PageTemplate Initializing");
+                    Page = new Experience.Controls.PageTemplate(data.Template);
+                    console.log("PageTemplate Initialized");
+                }).error(function (e)
+                {
+                    alert(e);
+                }
+            );
+
+            }).error(function (e)
+            {
+                //alert(JSON.stringify(e));
+            }
+           );
+        });
+    </script>
+</head>
+<body>
+    <div id="Page" exp-type="PageTemplate">
+        <div id="Modules" exp-type="ModulesWrapper">
+
+            <!------------ SEARCH TEMPLATE ------------>
+            
+        </div><!-- END MODULES -->
+    </div>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="ExperienceJS/Init.js"></script>
+    <script src="ExperienceJS/Experience.js"></script>
+    <script src="js/vendor/defiant.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+﻿html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: 1em;
+}
+
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+}
+
+ul{
+    margin: 0px;
+    padding:0px;
+}
+
+a {
+    text-decoration:none;
+    color: #000;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#DebugPanel {
+    z-index: 999;
+    background: #ff0000;
+    opacity: 0.6;
+    width: 100%;
+    height:25px;
+    padding: 5px 5px 5px 5px;
+}
+
+#Page {
+    width: 100%;
+    height: 100%;
+}
+
+#Modules {
+    width: 100%;
+    padding-bottom: 55px;
+}
+
+.Module {
+    position:relative;
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-bottom: 5px solid #ebebeb;
+}
+
+#Modules div:last-of-type {
+    border-bottom: none;
+}
+
+.moduleMockup {
+    width:100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div.moduleControls {
+    /*position: absolute;
+    font-family:Arial;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 100%;*/
+}
+
+div.moduleControls div {
+    /*position:absolute;
+    top: 7px;*/
+}
+
+
+
+
+
+
+
+
+/* HEADER SECTION */
+header {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 35px;
+}
+div[exp-field="{title}"] {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5625em;
+    font-weight: 600;
+}
+a[exp-field="{cast}"] {
+    width: 110px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5625em;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+}
+a[exp-field="{cast}"] img {
+    padding-left: 5px;
+}
+a[exp-field="{more}"] {
+    display: table-cell;
+    vertical-align: middle;
+    background: url('../img/arrow.png') center center no-repeat;
+    width: 20px;
+    height: 25px;
+}
+/* END HEADER SECTION */
+
+
+.VideoSize {width: 100%;}
+
+
+
+/* LIST HORIZONTAL */
+.info_container, .details_container {
+    width: 100%;
+    display: table;
+}
+
+span[exp-field="{Item.Title}"] {
+    float: left;
+    font-size: 2.0625em;
+    font-weight: 500;
+    color: #000;
+}
+
+span[exp-field="{Item.SubTitle}"] {
+    font-size: 1.5625em;
+    font-weight: 500;
+    color: #828282;
+}
+
+/* END LIST HORIZONTAL */
+
+/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        body {
+            font-size: 0.625em;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+        body {
+            font-size: 0.75em;
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        body {
+            font-size: 1em;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        body {
+            font-size: 1.125em;
+        }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        body {
+            font-size: 1.25em;
+        }
+    }
+

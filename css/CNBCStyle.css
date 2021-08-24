@@ -1,0 +1,444 @@
+﻿.TextCenter {text-align: center;}
+
+.TableDisplay {display: table;}
+.TableCellDisplay {display: table-cell; vertical-align: middle;}
+
+.PaddingRight {padding-right: 10px;}
+.PaddingLeft {padding-left: 10px;}
+
+.WidthOneHundred {width: 100%;}
+
+.FloatRight {float: right;}
+.FloatLeft {float: left;}
+
+.BorderFifty {border-radius: 50% !important;}
+
+.Close {border: 2px solid #b2b2b2; background: url('../img/close_icon.png') center center no-repeat; width: 26px; height: 26px;}
+
+.BTNFull {    
+    display: block;
+    width: 100%;
+}
+
+.hide {display: none;}
+.show {display: block;}
+
+
+.Logo {width: 200px;}
+
+#StockSearchTemplate.Module, #HotStocksTemplate.Module {background: #f4f5f7; border-bottom: 3px solid #fff;}
+
+#PageHeader.Module, #StockSearchTemplate.Module, #HotStocksTemplate.Module {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#StockSearch {background: #f4f5f7; border-bottom: 3px solid #b2b2b2;}
+
+#PageHeader header, #StockSearchTemplate header, #HotStocksTemplate header {width: initial; position: initial; display: block; height: initial;}
+.CNBCHeader {width: 100%; color: #fff; font-size: 1.25em; font-weight: 900; background: #146195; padding: 10px; margin-left: -15px; margin-right:-15px; border-bottom: 3px solid #fff;}
+
+.SearchMenuWrapper {width: 100%; display: table; background: none; padding-top: 10px; padding-bottom: 10px;}
+
+.SearchWrapper {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px;
+    background: #ebebeb;
+    border: 2px solid #b2b2b2;
+    border-radius: 5px;
+}
+.SearchWrapperInner {
+    display: table;
+    width: 100%;
+    padding: 5px;
+    background: #ebebeb;
+    border-radius: 5px;
+}
+
+.SearchIconLeft {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: url(../img/magnifyingglass.png) center center no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.SearchIconRight {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: url(../img/microphone.png) center center no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+
+
+.ActionWrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ActionWrapper a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: #f4f5f7;
+    margin-right: 5px;
+}
+
+
+#SymbolSearch {
+	width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    border:none;
+	text-align: left;
+    padding-left: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    background: transparent;
+}
+
+.StockSearchSettingsWrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 45px;
+}
+.StockSearchSettingsWrapper a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.StockSearchSettingsWrapper a:nth-of-type(2) {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.BTN {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 42px;
+    font-size: 1.125em;
+    font-weight: 700;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Primary {    
+    color: #fff;
+    background: #3da5ed;
+    border: 2px solid #146195;
+}
+
+.Secondary {
+    color: #2077B6;
+    background: #f4f5f7;
+    border: 2px solid #b2b2b2;
+}
+
+.Critical {color: #fff; background: #EF6527; border: 2px solid #c20b20;}
+
+.IconImage {
+    width: 20px;
+    margin-left: 5px;
+}
+
+
+
+.ListHeading {
+    font-weight: 700;
+}
+
+.ListHeading th,
+.StockListItem td {padding: 5px;}
+.ListHeading th {
+    text-align: right;
+    color: #fff;
+    background: #146195;
+    border: 1px solid #b2b2b2;
+    border-bottom: 3px solid #b2b2b2;
+}
+.ListHeading th:nth-of-type(1) {
+    text-align: left;
+}
+
+.StockListItem td {
+    text-align: right;
+    border: 1px solid #b2b2b2;
+}
+.StockListItem td:nth-of-type(1) {
+    text-align: Left;
+}
+
+.MyStocks {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow-x: scroll;
+}
+
+.StocksTable {
+    width: 100%;
+    color: #737373;
+    background: #f4f5f7;
+    border: 1px solid #b2b2b2;
+}
+
+
+.StockSymbol {color: #424858; font-weight: 700;}
+.LastPrice {color: #f4642a;}
+.SecurityValue, .Volume, .DayRange {font-weight: 700;}
+
+
+.ChangeWrapper {
+    float: right;
+    color: #fff;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.Positive {background: #23a35d;}
+.Negative {background: #e3352b;}
+.Neutral {background: #8F9494;}
+
+.Change {display: inline-block; width: 10px; height: 10px; margin-right: 10px;}
+.ChangeUp {background: url('../img/arrow_up.png') center center no-repeat;}
+.ChangeNone {background: none;}
+.ChangeDown {background: url('../img/arrow_down.png') center center no-repeat;}
+
+
+.Module {
+    border-bottom: none;
+}
+
+/* MODAL SECTION */
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 72, 87, 0.8);
+}
+
+.EditMyStocksTable {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #f4f5f7;
+    border: 4px solid #ccd6db;
+}
+
+
+.EditMyStocksTable tr th,
+.EditMyStocksTable tr td {padding: 10px;}
+
+.EditMyStocksTable tr th {
+    text-align: left;
+    border-bottom: 2px solid #ccd6db;
+    vertical-align: middle;
+    font-size: 1.25em;
+}
+
+.Close img {display: block; margin: 5px;}
+
+.Close {position: absolute; top: 8px; right: 10px; border: 2px solid #b2b2b2; background: url('../img/close_icon.png') center center no-repeat; width: 26px !important; height: 26px !important;}
+
+table .BTNFull {height: initial; padding: 10px; border-radius: 5px;}
+
+/* END MODAL SECTION */
+
+/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        .PaddingRight {padding-right: 0;}
+        .PaddingLeft {padding-left: 0;}
+        .BTN {display: inline-block; text-align: center; vertical-align: middle; white-space: nowrap; height: 45px; border-radius: initial; border-collapse: collapse; padding-left: 3px; padding-right: 3px;}
+        .IconImage {
+            width: 10px;
+            margin-left: 3px;
+        }        .Primary {    
+            border: 1px solid #146195;
+            border-collapse: collapse;
+        }
+        .SearchIconLeft {width: 0; height: 0; background: none;}
+        .SearchIconRight {width: 15px; height: 15px; background-size: contain;}
+        .Secondary {
+            border: 1px solid #b2b2b2;
+            border-collapse: collapse;
+        }
+        #StockSearchTemplate .SearchMenuWrapper {
+            width: initial;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .SearchWrapper {
+            border: 1px solid #b2b2b2;
+            border-radius: initial;
+            border-collapse: collapse;
+            padding: 0px;
+        }
+
+        table, .StocksTable {
+            border: 1px solid #b2b2b2;
+            border-left: none;
+            border-right: none;
+        }
+        table th:last-of-type, table td:last-of-type{
+            border-right: none;
+        }
+        table th:nth-of-type(1), table td:nth-of-type(1) {
+            border-left: none;
+        }
+        .ChangeWrapper {
+            width: 100%;
+            float: right;
+            color: #fff;
+            border-radius: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+        .PaddingRight {padding-right: 0;}
+        .PaddingLeft {padding-left: 0;}
+        .BTN {display: inline-block; text-align: center; vertical-align: middle; white-space: nowrap; height: 45px; border-radius: initial; border-collapse: collapse; padding-left: 3px; padding-right: 3px;}
+        .IconImage {
+            width: 10px;
+            margin-left: 3px;
+        }
+        .SearchIconLeft {width: 0; height: 0; background: none;}
+        .SearchIconRight {width: 15px; height: 15px; background-size: contain;}
+        .Primary {    
+            border: 1px solid #146195;
+            border-collapse: collapse;
+        }
+        .Secondary {
+            border: 1px solid #b2b2b2;
+            border-collapse: collapse;
+        }
+        #StockSearchTemplate .SearchMenuWrapper {
+            width: initial;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .SearchWrapper {
+            border: 1px solid #b2b2b2;
+            border-radius: initial;
+            border-collapse: collapse;
+            padding: 0px;
+        }
+
+        table, .StocksTable {
+            border: 1px solid #b2b2b2;
+            border-left: none;
+            border-right: none;
+        }
+        table th:last-of-type, table td:last-of-type{
+            border-right: none;
+        }
+        table th:nth-of-type(1), table td:nth-of-type(1) {
+            border-left: none;
+        }
+        .ChangeWrapper {
+            width: 100%;
+            float: right;
+            color: #fff;
+            border-radius: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .PaddingRight {padding-right: 10px;}
+        .PaddingLeft {padding-left: 10px;}
+        .IconImage {
+            width: 20px;
+            margin-left: 5px;
+        }
+        .SearchIconLeft {width: 26px; height: 26px;}
+        .SearchIconRight {width: 26px; height: 26px;}
+        .BTN {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap; 
+            height: 42px;
+            font-size: 1.125em;
+            font-weight: 700;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+        }
+        .Primary {    
+            color: #fff;
+            background: #3da5ed;
+            border: 2px solid #146195;
+        }
+        .Secondary {
+            color: #2077B6;
+            background: #f4f5f7;
+            border: 2px solid #b2b2b2;
+        }
+        #StockSearchTemplate .SearchMenuWrapper {width: 100%; display: table; background: none; padding-top: 10px; padding-bottom: 10px; margin-left: 0px; margin-right: 0px;}
+
+        .SearchWrapper {
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 5px;
+            background: #ebebeb;
+            border: 2px solid #b2b2b2;
+            border-radius: 5px;
+        }
+        table{
+            border: 1px solid #b2b2b2;
+        }
+        .ChangeWrapper {
+            width: initial;
+            float: right;
+            color: #fff;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .MyStocks {
+            margin-left: -15px;
+            margin-right: -15px;
+            overflow-x: auto;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+    }
+
+
+

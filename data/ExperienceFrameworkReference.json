@@ -1,0 +1,296 @@
+{
+  "ModuleDefinitions": [
+    {
+      "Name": "Module",
+      "Description": "",
+      "Properties": [
+        {
+          "key": "ID",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Title",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Index",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "More",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Data",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+        "Name": "List",
+        "Description": "List",
+        "Properties": [
+            {
+                "key": "Direction",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "value": "Horizontal",
+                "writable": true
+            },
+            {
+                "key": "Items.Title",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "Items.Subtitle",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "Items.Thumbnail",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "Items.ID",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "Items.Info",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "Items.Root",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            },
+            {
+                "key": "dataFunction",
+                "type": "String",
+                "configurable": false,
+                "enumerable": true,
+                "writable": true
+            }
+        ]
+    },
+    {
+      "Name": "Table",
+      "Description": "Table",
+      "Properties": [
+        {
+          "key": "Direction",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "value": "Horizontal",
+          "writable": true
+        },
+        {
+            "key": "Items.Root",
+            "type": "String",
+            "configurable": false,
+            "enumerable": true,
+            "writable": true
+        },
+        {
+            "key": "Items.Variables",
+            "type": "String",
+            "configurable": false,
+            "enumerable": true,
+            "writable": true
+        },
+        {
+          "key": "Columns",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Items.Root",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "Name": "SearchBar",
+      "Description": "This is the Search Bar.",
+      "Properties": [
+        {
+          "key": "DisplayGuideNav",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "DisplaySettingsNav",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "VoiceUrl",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "GuideAction",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "SettingsAction",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "Name": "MainMenu",
+      "Description": "This is the MainMenu",
+      "Properties": [
+        {
+          "key": "Items.Root",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Items.Title",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+            "key": "Items.Link",
+            "type": "String",
+            "configurable": false,
+            "enumerable": true,
+            "writable": true
+        },
+        {
+          "key": "Items.Selected",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    },
+    {
+      "Name": "BannerAd",
+      "Description": "",
+      "Properties": [
+        {
+          "key": "AdImage",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "ClickAction",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    }
+  ],
+  "ComponentDefinitions": [
+    {
+      "Name": "Component",
+      "Description": "",
+      "Properties": [
+        {
+          "key": "ID",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Title",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    }
+  ],
+  "TemplateDefinitions": [
+    {
+      "Name": "Template",
+      "Description": "",
+      "Properties": [
+        {
+          "key": "ID",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Title",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        },
+        {
+          "key": "Index",
+          "type": "String",
+          "configurable": false,
+          "enumerable": true,
+          "writable": true
+        }
+      ]
+    }
+  ]
+}

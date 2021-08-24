@@ -1,0 +1,61 @@
+﻿{
+    "Result": {
+        "Stock" : [
+            {
+                "Ticker": "AERI",
+                "CompanyName": "Aerie Pharmaceuticals Inc",
+                "Last": "34.95 USD",
+                "LastTime": "09/16/16 EDT",
+                "Change": "+0.08",
+                "ChangePCT": "+0.2294%",
+                "Volume": "359.40K",
+                "Low": "30.9",
+                "High": "35.25"
+            },
+            {
+                "Ticker": "AERI",
+                "CompanyName": "Aerie Pharmaceuticals Inc",
+                "Last": "34.95 USD",
+                "LastTime": "09/16/16 EDT",
+                "Change": "+0.08",
+                "ChangePCT": "+0.2294%",
+                "Volume": "359.40K",
+                "Low": "30.9",
+                "High": "35.25"
+            },
+            {
+                "Ticker": "AERI",
+                "CompanyName": "Aerie Pharmaceuticals Inc",
+                "Last": "34.95 USD",
+                "LastTime": "09/16/16 EDT",
+                "Change": "+0.08",
+                "ChangePCT": "+0.2294%",
+                "Volume": "359.40K",
+                "Low": "30.9",
+                "High": "35.25"
+            },
+            {
+                "Ticker": "AERI",
+                "CompanyName": "Aerie Pharmaceuticals Inc",
+                "Last": "34.95 USD",
+                "LastTime": "09/16/16 EDT",
+                "Change": "+0.08",
+                "ChangePCT": "+0.2294%",
+                "Volume": "359.40K",
+                "Low": "30.9",
+                "High": "35.25"
+            },
+            {
+                "Ticker": "AERI",
+                "CompanyName": "Aerie Pharmaceuticals Inc",
+                "Last": "34.95 USD",
+                "LastTime": "09/16/16 EDT",
+                "Change": "+0.08",
+                "ChangePCT": "+0.2294%",
+                "Volume": "359.40K",
+                "Low": "30.9",
+                "High": "35.25"
+            }
+        ]
+    }
+}

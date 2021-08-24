@@ -1,0 +1,154 @@
+﻿body {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+a {
+    text-decoration:none;
+    color: #000;
+}
+
+#DebugPanel {
+    z-index: 999;
+    background: #ff0000;
+    opacity: 0.6;
+    height:25px;
+    padding: 5px 5px 5px 5px;
+}
+
+#Page {
+    position: absolute;
+}
+
+#SearchPanel {
+    display: block;
+    position:relative;
+    overflow:visible;
+}
+
+#SearchPanel img {
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index:-2;
+}
+
+div#Modules {
+    position: relative;
+    top: 0px;
+    left: 0;
+}
+
+#MainMenu {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    height: 55px;
+}
+
+div#Modules div {
+    position: relative;
+    background: url('../img/03-ModuleDivider.jpg') top left no-repeat;
+    padding-top: 3px;
+    display:block;
+}
+
+/* Temporary for images*/
+img.moduleMockup {
+    width:100%;
+}
+
+div.moduleControls {
+    position: absolute;
+    display:block;
+    top:0;
+    font-family:Arial;
+    z-index:1;
+}
+
+div.moduleControls div {
+    position: absolute;
+}
+
+div#guideWrapper {
+     top: 15px;
+    left: 24px;
+}
+
+div#searchWrapper {
+    top: 6px;
+    left: 95px;
+}
+
+div#settingsWrapper {
+    top: 7px;
+    left: 370px;
+    width:31px;
+    height:41px;
+}
+
+div#menuWrapper {
+    top: 0px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+}
+
+div#menuWrapper div {
+    text-align:center;
+    padding-top: 48%;
+    font-weight:bold;
+    background-color: #FFF;
+}
+
+div#menuWrapper div.selected {
+    background-color: #00b2ee;
+    color:white;
+}
+
+div#menuWrapper div.selected a {
+    color:white;
+}
+
+div#menuWrapper div:first-child {
+    width: 138px;
+    height: 200px;
+    top: 0px;
+    left: 0px;    
+}
+
+div#menuWrapper div:nth-child(2) {
+    width: 138px;
+    height: 200px;
+    top: 0px;
+    left: 138px;
+}
+
+div#menuWrapper div:nth-child(3) {
+    width: 138px;
+    height: 200px;
+    top: 0px;
+    left:calc(138px * 2);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type=search] {
+	width: 222px;
+    height: 30px;
+    /*
+        border-radius: 5px;
+        background: #ebebeb;
+    */
+    border:none;
+    background-color:transparent;
+	text-align: left;
+    padding-left: 33px;
+    font-weight:lighter;
+    font-size: .95em;
+}
